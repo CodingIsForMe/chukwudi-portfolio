@@ -1,0 +1,7 @@
+node_modules
+.next
+.git
+.agents
+claude-code-portfolio-prompt.md
+portfolio-rework-prompt.md
+dev.log

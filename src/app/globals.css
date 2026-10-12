@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Editorial design system. Warm "paper" surfaces, ink text, a single vermilion
+  accent. Tokens are space-separated RGB channels so Tailwind's
+  `rgb(var(--x) / <alpha-value>)` can apply opacity. DARK is the default
+  (warm charcoal); the `.light` class swaps to the warm paper palette. Type:
+  Fraunces (serif display) + Hanken Grotesk (body) + JetBrains Mono (labels).
+*/
+@layer base {
+  :root {
+    /* Dark editorial (default) — warm charcoal, NOT blue-black */
+    --paper: 21 18 14; /* #15120E */
+    --panel: 30 26 21; /* #1E1A15 */
+    --panel-2: 38 33 27; /* #26211B */
+    --ink: 236 229 216; /* #ECE5D8 warm bone */
+    --muted: 154 144 130; /* #9A9082 */
+    --line: 236 229 216; /* ink, used at low alpha for hairlines */
+    --accent: 228 80 46; /* #E4502E vermilion */
+    --accent-ink: 247 242 234; /* near-white on accent */
+  }
+
+  .light {
+    /* Warm editorial — bone paper, ink, vermilion */
+    --paper: 239 234 224; /* #EFEAE0 */
+    --panel: 246 242 234; /* #F6F2EA */
+    --panel-2: 231 225 213; /* #E7E1D5 */
+    --ink: 26 23 20; /* #1A1714 */
+    --muted: 107 99 88; /* #6B6358 */
+    --line: 26 23 20; /* ink, used at low alpha */
+    --accent: 209 64 42; /* #D1402A */
+    --accent-ink: 247 242 234;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: rgb(var(--paper));
+    color: rgb(var(--ink));
+    font-family: var(--font-body), system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Fraunces optical sizing — let large display type use the display optical
+     size for that high-contrast editorial feel. */
+  .font-heading {
+    font-optical-sizing: auto;
+  }
+
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  ::selection {
+    background-color: rgb(var(--accent) / 0.9);
+    color: rgb(var(--accent-ink));
+  }
+}
+
+@layer components {
+  .container-px {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  /* Mono micro-label — eyebrows, section numbers, meta */
+  .label {
+    @apply font-mono text-xs uppercase tracking-[0.18em] text-muted;
+  }
+
+  /* Hairline rule */
+  .rule {
+    @apply h-px w-full border-0 bg-border/20;
+  }
+
+  /* Editorial surface: panel fill + hairline border, no blur/glow */
+  .surface-card {
+    background-color: rgb(var(--panel));
+    @apply rounded-lg border border-border/15;
+  }
+
+  /* Animated text underline that draws on hover */
+  .link-underline {
+    @apply relative;
+  }
+  .link-underline::after {
+    content: "";
+    @apply absolute -bottom-0.5 left-0 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-300;
+  }
+  .link-underline:hover::after {
+    @apply origin-left scale-x-100;
+  }
+
+  /* Accent highlight behind a key phrase (replaces the old neon marker) */
+  .accent-mark {
+    @apply font-semibold text-accent;
+  }
+}
+
+@layer utilities {
+  /* Fine film-grain — overlaid site-wide for a printed-matter texture */
+  .bg-grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Neutral, slim scrollbar */
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--paper));
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--ink) / 0.35);
+  border-radius: 0;
+  border: 3px solid rgb(var(--paper));
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--accent));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
