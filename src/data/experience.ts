@@ -13,21 +13,20 @@ export const experiences: ExperienceItem[] = [
   {
     company: "Dalhousie University, Faculty of Computer Science",
     role: "Volunteer Software Developer",
-    duration: "Feb 2026 - Present",
+    duration: "Feb 2026 - Aug 2026",
     location: "Halifax, Nova Scotia, Canada",
     description:
-      "Sole developer of PosiFit, a health app for the Persuasive Computing Lab that helps people in eating disorder recovery keep a private journal of meals, moods, and reflections. I build both the app and the backend it syncs to.",
+      "Sole developer of PosiFit, a health app for the Persuasive Computing Lab that helps people in eating disorder recovery keep a private journal of meals, moods, and reflections. I built both the app and the backend it syncs to.",
     highlights: [
       "Built the app in React Native and Expo so it works fully offline, then added cloud sync so someone can restore their journal on a new phone without losing entries.",
       "Designed and deployed the backend myself: a Node.js and Express API on MongoDB Atlas, with anonymous sign-in so no names, emails, or passwords are ever collected.",
       "Moved the reflection screen away from mood scores and charts, and added crisis support lines for Canada and the US after checking each one was still active.",
     ],
-    current: true,
   },
   {
     company: "4SpotConsulting",
     role: "AI Automation Specialist",
-    duration: "Nov 2025 - Present",
+    duration: "Nov 2025 - Aug 2026",
     location: "Remote",
     description:
       "Designed and deployed end-to-end automation workflows using n8n, Make, and Airtable, turning repetitive manual processes into reliable production systems.",
@@ -36,7 +35,6 @@ export const experiences: ExperienceItem[] = [
       "Integrated OpenAI, Apify, Telegram bots, Google Workspace, and PDF processing tools into production workflows.",
       "Cut hours of manual coordination per week while reducing errors across sales, delivery, and operations.",
     ],
-    current: true,
   },
   {
     company: "Everything Data",

@@ -43,14 +43,13 @@ export default function About() {
               <p>
                 I design and deploy automation that turns repetitive manual
                 workflows (proposal creation, performance tracking, lead
-                generation) into intelligent, scalable systems. For the past 9
-                months I&rsquo;ve done exactly that as an AI Automation
-                Specialist at <span className="accent-mark">4SpotConsulting</span>
-                .
+                generation) into intelligent, scalable systems. I did exactly
+                that for 9 months as an AI Automation Specialist at{" "}
+                <span className="accent-mark">4SpotConsulting</span>.
               </p>
               <p>
-                Alongside the automation work I build products end to end. Since
-                February 2026 I&rsquo;ve been a volunteer developer at{" "}
+                Alongside the automation work I build products end to end. From
+                February to August 2026 I was a volunteer developer at{" "}
                 <span className="accent-mark">Dalhousie University</span> in
                 Halifax, where I built <span className="accent-mark">PosiFit</span>,
                 a mobile recovery support app, and the backend it runs on.
