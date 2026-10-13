@@ -58,9 +58,11 @@ export default function Experience() {
                   {exp.company}
                 </p>
 
-                <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-                  {exp.description}
-                </p>
+                {exp.description && (
+                  <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
+                    {exp.description}
+                  </p>
+                )}
 
                 {exp.highlights && exp.highlights.length > 0 && (
                   <ul className="mt-6 space-y-3">

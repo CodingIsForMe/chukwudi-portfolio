@@ -6,7 +6,7 @@ import SectionHeading from "./SectionHeading";
 
 const stats = [
   { value: 6, suffix: "+", label: "Automations deployed" },
-  { value: 9, suffix: "", label: "Months at 4SpotConsulting" },
+  { value: 9, suffix: "", label: "Months at 4Spot Consulting" },
   { value: 1, suffix: "+", label: "Year of AI experience" },
   { value: 50, suffix: "+", label: "Community members mentored" },
 ];
@@ -26,14 +26,15 @@ export default function About() {
           <ScrollReveal direction="left">
             <div className="space-y-6 text-lg leading-relaxed text-muted sm:text-xl">
               <p>
-                I&rsquo;m a{" "}
+                I&rsquo;m an{" "}
                 <span className="font-medium text-foreground">
-                  Full Stack Engineer
+                  AI Automation Engineer
                 </span>{" "}
                 and{" "}
                 <span className="font-medium text-foreground">
-                  AI Automation Specialist
+                  MSc Computer Science student
                 </span>{" "}
+                at the University of Lethbridge{" "}
                 who builds systems that connect data, people, and AI to
                 streamline how teams work. My expertise spans full stack
                 development, data analytics, and workflow automation using n8n,
@@ -43,9 +44,12 @@ export default function About() {
               <p>
                 I design and deploy automation that turns repetitive manual
                 workflows (proposal creation, performance tracking, lead
-                generation) into intelligent, scalable systems. I did exactly
-                that for 9 months as an AI Automation Specialist at{" "}
-                <span className="accent-mark">4SpotConsulting</span>.
+                generation) into intelligent, scalable systems. I&rsquo;ve done
+                exactly that in production, first at{" "}
+                <span className="accent-mark">Sourcing Sprint</span> and then as
+                an AI Automation Specialist at{" "}
+                <span className="accent-mark">4Spot Consulting</span> from
+                November 2025 to August 2026.
               </p>
               <p>
                 Alongside the automation work I build products end to end. From

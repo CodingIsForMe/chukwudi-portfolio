@@ -16,7 +16,7 @@ const LABEL =
 
 const META = [
   { k: "Email", v: EMAIL, href: `mailto:${EMAIL}` },
-  { k: "Location", v: "Canada" },
+  { k: "Location", v: "Lethbridge, AB" },
   { k: "Response", v: "Usually within 24 hours" },
 ];
 
